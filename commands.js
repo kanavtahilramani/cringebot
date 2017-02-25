@@ -12,5 +12,20 @@ exports.list = {
         re: new RegExp(/!mad (<@.*>)/, 'i'),
         filename: 'madMap',
         message: utils.stringTemplate`${0} has been mad ${1} ${2}. :joy:`
+    },
+    addQuote: {
+        type: 'addQuote',
+        re: new RegExp(/(!sms add) (.*)/, 'i'),
+        filename: 'shitmodosays'
+    },
+    getSpecificQuote: {
+        type: 'getQuote',
+        re: new RegExp(/(!sms) (\d*)/, 'i'),
+        filename: 'shitmodosays'
+    },
+    getQuote: {
+        type: 'getQuote',
+        re: new RegExp(/!sms/, 'i'),
+        filename: 'shitmodosays'
     }
 };
